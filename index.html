@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="SY.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <script defer src="script.js"></script>
+    <title>MS Paint Lite</title>
+  </head>
+  <body>
+    <header>
+      <div class="features">
+        <div class="pen style">
+          <span>Pen:</span>
+          <i class="fa-solid fa-pen"></i>
+        </div>
+        <div class="style">
+          <span>Pen-Color:</span>
+          <input type="color" class="color pen_color" />
+        </div>
+        <div class="erase style">
+          <span>Eraser:</span>
+          <i class="fa-solid fa-eraser"></i>
+        </div>
+        <div class="style">
+          <span>Pen/Eraser-Size:</span>
+          <input type="number" class="size" value="15" min="1" max="50" />
+        </div>
+        <div class="style">
+          <span>Background:</span>
+          <input class="color background_color" type="color" value="#ffffff" />
+        </div>
+        <div class="effects style">
+          <span>Effects:</span>
+          <select class="effect">
+            <option value="none">none</option>
+            <option value="Moving-Balls">Moving-Balls</option>
+            <option value="Snake-Effect">Snake-Effect</option>
+            <option value="Constellation-Effect">Constellation-Effect</option>
+            <option value="Trail-Effect1">Trail-Effect1</option>
+            <option value="Trail-Effect2">Trail-Effect2</option>
+            <option value="Mystic-Effect">Mystic-Effect</option>
+          </select>
+        </div>
+        <div class="style">
+          <span>Reset:</span>
+          <i class="fa-solid fa-rotate-right"></i>
+        </div>
+        <div class="save style">
+          <span>Save:</span>
+          <a class="download">
+            <i class="fa-solid fa-save"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+    <div class="message">
+      Please open this in your to laptop so that you can start designing your
+      masterpiece
+    </div>
+    <canvas class="canvas1"></canvas>
+  </body>
+</html>
