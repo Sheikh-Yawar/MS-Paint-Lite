@@ -11,12 +11,9 @@ const effect = document.querySelector(".effect");
 const saveBtn = document.querySelector(".fa-save");
 const resetCanvas = document.querySelector(".fa-rotate-right");
 const downloadAnchorTag = document.querySelector(".download");
-const boundaries = canvas.getBoundingClientRect();
-const temp = boundaries.top;
 
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight - temp;
-
+canvas.height = window.innerHeight;
 let pColor = pen_color.value;
 let bColor = background_color.value;
 let lineSize = size.value;
@@ -84,6 +81,8 @@ const mouse = {
 };
 
 const getMousePosition = (e) => {
+  const boundaries = canvas.getBoundingClientRect();
+  const temp = boundaries.top;
   mouse.x = e.x;
   mouse.y = e.y - temp;
 };
