@@ -11,9 +11,11 @@ const effect = document.querySelector(".effect");
 const saveBtn = document.querySelector(".fa-save");
 const resetCanvas = document.querySelector(".fa-rotate-right");
 const downloadAnchorTag = document.querySelector(".download");
+const boundaries = canvas.getBoundingClientRect();
+const temp = boundaries.top;
 
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight - 100;
+canvas.height = window.innerHeight - temp;
 
 let pColor = pen_color.value;
 let bColor = background_color.value;
@@ -83,7 +85,7 @@ const mouse = {
 
 const getMousePosition = (e) => {
   mouse.x = e.x;
-  mouse.y = e.y - 110;
+  mouse.y = e.y - temp;
 };
 canvas.addEventListener("mousemove", (e) => {
   if (mouseDown && (penSelected || eraserSelected)) {
